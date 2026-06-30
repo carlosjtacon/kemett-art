@@ -1,0 +1,11 @@
+{
+  "extension" : {
+    "identifier" : "net.tapas-software.JekyllServe",
+    "name" : "Jekyll Serve"
+  },
+  "extensionTemplate" : "jekyllServe",
+  "extensionValues" : {
+    "jekyllserve.custom-args" : "--livereload",
+    "jekyllserve.open-url" : true
+  }
+}
