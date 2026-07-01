@@ -2,25 +2,18 @@
 layout: default
 ---
 
-<!-- <div class="navigation">
-	{%- assign date_digits = page.File | split: "_" | first %}
-	{%- assign day   = date_digits | slice: 6, 2 %}
-	{%- assign month = date_digits | slice: 4, 2 %}
-	{%- assign year  = date_digits | slice: 0, 4 %}
-	{%- capture date_string %}{{ year }}-{{ month }}-{{ day }}{%- endcapture %}
-	{% capture photo_time %}{{date_string | date: '%s'}}{% endcapture %}
+<div class="navigation">
+	<a id="navPrev" class="{% unless page.previous %}disabled{% endunless %}" href="{{page.previous.url}}">Previous</a>
+    ·
+	<a id="navNext" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Next</a>
+</div>
 
-	{% for photo in site.photos %}
-    {% if photo.title == page.title %}
-    {% assign next = site.photos[forloop.index] %}
-	<div>
-		<a id="navPrev" class="{% if forloop.first %}disabled{% endif %}" href="{{prev.url}}">Previous</a>
-		·
-		<a id="navNext" class="{% if forloop.last %}disabled{% endif %}" href="{{next.url}}">Next</a>
-	</div>
-    {% endif %}
-    {% assign prev = photo %}
-	{% endfor %}
-</div> -->
+---
+{{page.date}}
+{{page.filename}}
+{{page.thumbnail}}
+{{page.category}}
+{{page.tags}}
+---
 
-<img src="/assets/images/{{page.category}}/{{page.filename}}"/>
+<img width="100%" src="/assets/images/portfolio/{{page.category}}/{{page.filename}}"/>

@@ -9,8 +9,8 @@ THUMB_MAX=1024
 category="$1"
     tags="$2"
 
-posts_dir="../../_posts/portfolio/$category"
-images_dir="../../assets/images/portfolio/$category"
+posts_dir="../_posts/portfolio/$category"
+images_dir="../assets/images/portfolio/$category"
 
 for f in *
 do
@@ -34,8 +34,6 @@ thumbnail: $output_filename-thumb.webp
 category: $category
 tags: $tags
 ---
-
-
 
 "
     echo "$input_filename..."

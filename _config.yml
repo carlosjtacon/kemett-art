@@ -23,7 +23,7 @@ defaults:
       type: "posts"
     values:
       permalink: "/portfolio/:categories/:year-:month-:day-:title"
-      layout: "portfolio"
+      layout: "post"
 
 exclude:
   - "*readme.md"
