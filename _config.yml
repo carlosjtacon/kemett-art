@@ -1,6 +1,5 @@
 url: "kemett-art.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: "Kemett Art" # the name of your site, e.g. ACME Corp.
 
 collections:
   pages:
@@ -16,7 +15,15 @@ defaults:
       path: ""
       type: "pages"
     values:
+      permalink: "/:path"
       layout: "default"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/portfolio/:categories/:year-:month-:day-:title"
+      layout: "portfolio"
 
 exclude:
   - "*readme.md"

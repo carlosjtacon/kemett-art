@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- <div class="navigation">
+	{%- assign date_digits = page.File | split: "_" | first %}
+	{%- assign day   = date_digits | slice: 6, 2 %}
+	{%- assign month = date_digits | slice: 4, 2 %}
+	{%- assign year  = date_digits | slice: 0, 4 %}
+	{%- capture date_string %}{{ year }}-{{ month }}-{{ day }}{%- endcapture %}
+	{% capture photo_time %}{{date_string | date: '%s'}}{% endcapture %}
+
+	{% for photo in site.photos %}
+    {% if photo.title == page.title %}
+    {% assign next = site.photos[forloop.index] %}
+	<div>
+		<a id="navPrev" class="{% if forloop.first %}disabled{% endif %}" href="{{prev.url}}">Previous</a>
+		·
+		<a id="navNext" class="{% if forloop.last %}disabled{% endif %}" href="{{next.url}}">Next</a>
+	</div>
+    {% endif %}
+    {% assign prev = photo %}
+	{% endfor %}
+</div> -->
+
+<img src="/assets/images/{{page.category}}/{{page.filename}}"/>
