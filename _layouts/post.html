@@ -8,12 +8,14 @@ layout: default
 	<a id="navNext" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Next</a>
 </div>
 
----
-{{page.date}}
-{{page.filename}}
-{{page.thumbnail}}
-{{page.category}}
-{{page.tags}}
----
+<br>
+<br>
+<br>
 
-<img width="100%" src="/assets/images/portfolio/{{page.category}}/{{page.filename}}"/>
+{%if page.category != "animation"%}
+<img class="img-details" src="/assets/images/portfolio/{{page.category}}/{{page.filename}}"/>
+{% else %}
+<video class="img-details" loop autoplay>
+	<source src="/assets/images/portfolio/{{page.category}}/{{page.filename}}" type="video/mp4">
+</video>
+{% endif %}

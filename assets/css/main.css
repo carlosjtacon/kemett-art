@@ -1,3 +1,173 @@
+:root {
+	font-family: "Averia Sans Libre", sans-serif;
+}
+
+body {
+	--inkColor: hsl(0, 0%, 12%);
+	--titleColor: hsl(360, 1%, 7%);
+	--backgroundColor: hsl(206, 20%, 84%);
+	/* --backgroundColor: rgb(176, 202, 227); */
+	--linkColor: #d47b3f;
+	--linkColorHover: #d8b03c;
+	--accentColor: rgb(127, 165, 204);
+	--disabledColor: grey;
+
+	background-color: var(--backgroundColor);
+	color: var(--inkColor);
+	padding: 2.5em;
+	min-width: 0;
+	margin: auto;
+
+	--numcolumns: 1;
+	/* mobile first */
+}
+
 h1 {
-	color: red;
+	color: var(--inkColor);
+	font-size: 3.35em;
+	text-align: center;
+	font-family: "Pirata One", system-ui;
+	text-shadow: 3px 2px 0px var(--accentColor);
+	margin: 0.5em;
+}
+
+h2 {
+	color: var(--titleColor);
+	font-family: "IM Fell Double Pica SC", serif;
+	margin: 0;
+}
+
+h3 {
+	color: var(--titleColor);
+	font-family: "Averia Serif Libre", serif;
+	text-align: right;
+	font-size: 1.25em;
+	margin: 0;
+}
+
+h4 {
+	color: var(--titleColor);
+	font-family: "Averia Serif Libre", serif;
+}
+
+a {
+	color: var(--linkColor);
+	text-decoration: none;
+	font-weight: 700;
+	font-style: italic;
+	/* text-shadow: 0px 0px 1px var(--inkColor); */
+}
+
+a:hover {
+	color: var(--linkColorHover) !important;
+}
+
+.breadcrumbs {
+	font-size: 1.15em;
+}
+
+.navigation {
+	float: left;
+	margin-top: 1em;
+}
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+	color: var(--disabledColor) !important;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(var(--numcolumns), 1fr);
+	gap: 1em;
+}
+
+.column2m {
+	--numcolumns: 2 !important;
+}
+
+.column3m {
+	--numcolumns: 3 !important;
+}
+
+.column {
+	height: 100%;
+
+}
+
+.border {
+	margin-top: 1em;
+	padding: 0.5em;
+	border: 2px solid black;
+}
+
+.avatar {
+	margin-top: 1em;
+	width: 100%;
+	aspect-ratio: 1/1;
+	/* background-color: red; */
+	/* border: 2px solid black; */
+
+}
+
+.stats {
+	font-size: 0.85em;
+	/* aspect-ratio: 1/1; */
+}
+
+.img-details {
+	max-width: 100%;
+	max-height: 700px;
+	margin: auto;
+	display: block;
+}
+
+@counter-style --cross {
+	system: cyclic;
+	symbols: '✧';
+}
+
+@counter-style --stars {
+	system: cyclic;
+	symbols: '✷' '※' '❊' '✧' '✧';
+}
+
+ul.bullets li {
+	list-style: none;
+	line-height: 1.5;
+}
+
+ul.bullets li::before {
+	position: absolute;
+	margin-top: -0.0em;
+	margin-left: -1.65em;
+	inline-size: 1em;
+	text-align: end;
+	content: counter(list-item, --cross);
+}
+
+ul.stars li::before {
+	content: counter(list-item, --stars) !important;
+}
+
+
+@media all and (min-width: 800px) {
+	.column2 {
+		--numcolumns: 2 !important;
+	}
+
+	.column3 {
+		--numcolumns: 3 !important;
+	}
+
+	.navigation {
+		position: relative;
+		text-align: right;
+		float: right;
+	}
+
+	/* .img-details {
+		min-width: 600px;
+	} */
 }

@@ -1,0 +1,17 @@
+<div class="breadcrumbs">
+{% assign crumbs = page.url | remove:'/index.html' | remove:'/index' | split: '/' %}
+<a href="/">Home</a>
+{% for crumb in crumbs offset: 1 %}
+{% if forloop.last %}
+    {% if page.title == 'Index'} %}
+    / {{ crumb | capitalize }}
+    {% else %}
+    / {{ page.title }}
+    {% endif %}
+{% else %}
+/ <a
+    href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{
+    crumb | remove:'.html' | capitalize }}</a>
+{% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Pirata One";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/Pirata_One/PirataOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IM Fell Double Pica SC";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/IM_Fell_Double_Pica_SC/IMFellDoublePicaSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 300;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Averia Serif Libre";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 300;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Light.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 300;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Averia Sans Libre";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-BoldItalic.ttf");
+}

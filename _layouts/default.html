@@ -2,6 +2,13 @@
 layout: base
 ---
 
-<!-- In case we want to add includes -->
+<style>
+  body {
+    max-width: 60em;
+  }
+</style>
+
+{% include navigation.html %}
+{% include breadcrumbs.html %}
 
 {{content}}
