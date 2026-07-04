@@ -4,7 +4,7 @@
     {%if post.category != "animation"%}
     <img width="100%" src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}"/>
     {% else %}
-    <video width="100%" loop autoplay>
+    <video width="100%" loop autoplay muted playsinline>
       <source src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}" type="video/webm">
     </video>
     {% endif %}
