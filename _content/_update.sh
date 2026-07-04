@@ -69,4 +69,7 @@ order: 0
 
     # Create post from template
     echo "$template" > $post_filename
+
+    # Delete ingested files
+    rm "$f"
 done
