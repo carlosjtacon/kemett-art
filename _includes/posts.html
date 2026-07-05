@@ -1,5 +1,9 @@
 <div class="grid column3">
-  {% for post in include.posts %}
+  {% assign posts = include.posts %}
+  {% assign posts = posts | sort: "filedate" %}
+  {% assign posts = posts | sort: "date" %}
+  {% assign posts = posts | sort: "order" | reverse %}
+  {% for post in posts %}
     <a href="{{ post.url }}">
     {%if post.category != "animation"%}
     <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}')";></div>

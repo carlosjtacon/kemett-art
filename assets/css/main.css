@@ -55,7 +55,6 @@ a {
 	text-decoration: none;
 	font-weight: 700;
 	font-style: italic;
-	/* text-shadow: 0px 0px 1px var(--inkColor); */
 }
 
 a:hover {
@@ -63,7 +62,7 @@ a:hover {
 }
 
 .breadcrumbs {
-	font-size: 1.15em;
+	font-size: 1.25em;
 }
 
 .navigation {
@@ -121,6 +120,7 @@ a:hover {
 	max-height: 700px;
 	margin: auto;
 	display: block;
+	border: 1px solid black;
 }
 
 .thumbnail {
@@ -139,6 +139,11 @@ a:hover {
 	color: var(--inkColor);
 	padding: 0.25em 1.25em 0.25em 1.25em;
 	line-height: 2.5em;
+}
+
+.btnstrip:hover {
+	background-color: var(--linkColorHover);
+	color: var(--inkColor) !important;
 }
 
 .selected {
@@ -204,8 +209,4 @@ ul.stars li::before {
 		text-align: right;
 		float: right;
 	}
-
-	/* .img-details {
-		min-width: 600px;
-	} */
 }
