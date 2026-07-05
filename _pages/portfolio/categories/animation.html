@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /portfolio/animation
+title: Animation
+---
+
+<h1>{{page.title}}</h1>
+
+{% include portfolio_filter.html selected='animation' %}
+
+{% assign posts = site.posts | where: "category", "animation"%}
+{% include posts.html posts=posts %}

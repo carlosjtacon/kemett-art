@@ -1,11 +1,12 @@
 ---
 layout: default
+permalink: /portfolio/traditional
 title: Traditional Art
 ---
 
 <h1>{{page.title}}</h1>
 
-{% include portfolio_filter.html %}
+{% include portfolio_filter.html selected='traditional' %}
 
 {% assign posts = site.posts | where: "category", "traditional"%}
 {% include posts.html posts=posts %}

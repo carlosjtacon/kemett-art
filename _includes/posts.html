@@ -2,7 +2,7 @@
   {% for post in include.posts %}
     <a href="{{ post.url }}">
     {%if post.category != "animation"%}
-    <img width="100%" src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}"/>
+    <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}')";></div>
     {% else %}
     <video width="100%" loop autoplay muted playsinline>
       <source src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}" type="video/webm">

@@ -1,4 +1,4 @@
-<p style="text-align: center;">| <a><a href="/portfolio">ALL</a> | </a>{% for category in site.categories %}
-<a href="/portfolio/{{category[0]}}">{{category[0] | upcase }}</a> |
+<p style="text-align: center;"><a class="btnstrip{% if include.selected == 'all'%} selected{%endif%}" href="/portfolio">ALL</a> {% for category in site.categories %}
+<a class="btnstrip{% if include.selected == category[0]%} selected{%endif%}" href="/portfolio/{{category[0]}}">{{category[0] | upcase }}</a>
 {%endfor%}</p>
 <br>

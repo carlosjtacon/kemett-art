@@ -1,11 +1,12 @@
 ---
 layout: default
+permalink: /portfolio/3d
 title: 3D
 ---
 
 <h1>{{page.title}}</h1>
 
-{% include portfolio_filter.html %}
+{% include portfolio_filter.html selected='3d' %}
 
 {% assign posts = site.posts | where: "category", "3d"%}
 {% include posts.html posts=posts %}

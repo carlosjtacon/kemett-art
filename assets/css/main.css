@@ -123,6 +123,29 @@ a:hover {
 	display: block;
 }
 
+.thumbnail {
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: flex;
+	border: 1px solid black;
+	position: relative;
+}
+
+.btnstrip {
+	border: 2px solid var(--inkColor);
+	color: var(--inkColor);
+	padding: 0.25em 1.25em 0.25em 1.25em;
+	line-height: 2.5em;
+}
+
+.selected {
+	background-color: var(--inkColor);
+	color: var(--backgroundColor);
+}
+
 @counter-style --cross {
 	system: cyclic;
 	symbols: '✧';

@@ -1,11 +1,12 @@
 ---
 layout: default
+permalink: /portfolio/sketchbook
 title: Sketchbook
 ---
 
 <h1>{{page.title}}</h1>
 
-{% include portfolio_filter.html %}
+{% include portfolio_filter.html selected='sketchbook' %}
 
 {% assign posts = site.posts | where: "category", "sketchbook"%}
 {% include posts.html posts=posts %}
