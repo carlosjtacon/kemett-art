@@ -4,9 +4,11 @@
     {%if post.category != "animation"%}
     <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}')";></div>
     {% else %}
-    <video width="100%" loop autoplay muted playsinline>
-      <source src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}" type="video/webm">
-    </video>
+    <div class="video-container">
+      <video loop autoplay muted playsinline>
+        <source src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}" type="video/webm">
+      </video>
+    </div>
     {% endif %}
     </a>
   {% endfor %}
