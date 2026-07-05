@@ -91,12 +91,17 @@ a:hover {
 }
 
 .column {
-	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1em;
+}
 
+.column div {
+	flex-grow: 1;
 }
 
 .border {
-	margin-top: 1em;
 	padding: 0.5em;
 	border: 2px solid black;
 }
@@ -105,9 +110,10 @@ a:hover {
 	margin-top: 1em;
 	width: 100%;
 	aspect-ratio: 1/1;
-	/* background-color: red; */
-	/* border: 2px solid black; */
-
+	background-image: url('/assets/images/avatar.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .stats {
@@ -202,6 +208,10 @@ ul.stars li::before {
 
 	.column3 {
 		--numcolumns: 3 !important;
+	}
+
+	.column4 {
+		--numcolumns: 4 !important;
 	}
 
 	.navigation {
