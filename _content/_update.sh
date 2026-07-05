@@ -4,7 +4,7 @@
 # - Creates posts from pictures
 # - Moves pictures to assets -creates a new jpg- and creates thumbnails
 
-THUMB_MAX=1024
+THUMB_MAX=1280
 
 category="$1"
     tags="$2"
