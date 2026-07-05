@@ -1,0 +1,4 @@
+<p style="text-align: center;">| <a><a href="/portfolio">ALL</a> | </a>{% for category in site.categories %}
+<a href="/portfolio/{{category[0]}}">{{category[0] | upcase }}</a> |
+{%endfor%}</p>
+<br>
