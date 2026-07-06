@@ -6,7 +6,6 @@ body {
 	--inkColor: hsl(0, 0%, 12%);
 	--titleColor: hsl(360, 1%, 7%);
 	--backgroundColor: hsl(206, 20%, 84%);
-	/* --backgroundColor: rgb(176, 202, 227); */
 	--linkColor: #d47b3f;
 	--linkColorHover: #d8b03c;
 	--accentColor: rgb(127, 165, 204);
@@ -16,6 +15,7 @@ body {
 	color: var(--inkColor);
 	padding: 2.5em;
 	min-width: 0;
+	max-width: 1920;
 	margin: auto;
 
 	--numcolumns: 1;
@@ -102,7 +102,7 @@ a:hover {
 }
 
 .border {
-	padding: 0.5em;
+	padding: 0.75em;
 	border: 2px solid black;
 }
 
@@ -202,6 +202,9 @@ ul.stars li::before {
 
 
 @media all and (min-width: 800px) {
+	body {
+		padding: 4em;
+	}
 	.column2 {
 		--numcolumns: 2 !important;
 	}
