@@ -1,4 +1,8 @@
-<p style="text-align: center;"><a class="btnstrip{% if include.selected == 'all'%} selected{%endif%}" href="/portfolio">ALL</a> {% for category in site.categories %}
-<a class="btnstrip{% if include.selected == category[0]%} selected{%endif%}" href="/portfolio/{{category[0]}}">{{category[0] | upcase }}</a>
-{%endfor%}</p>
+<p style="text-align: center;">
+  <a class="btnstrip{% if include.selected == 'digital'%} selected{%endif%}" href="/portfolio/digital/">DIGITAL</a>
+  <a class="btnstrip{% if include.selected == 'traditional'%} selected{%endif%}" href="/portfolio/traditional/">TRADITIONAL</a>
+  <a class="btnstrip{% if include.selected == 'sketchbook'%} selected{%endif%}" href="/portfolio/sketchbook/">SKETCHBOOK</a>
+  <a class="btnstrip{% if include.selected == '3d'%} selected{%endif%}" href="/portfolio/3d/">3D</a>
+  <a class="btnstrip{% if include.selected == 'animation'%} selected{%endif%}" href="/portfolio/animation/">ANIMATION</a>
+</p>
 <br>

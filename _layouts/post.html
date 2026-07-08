@@ -12,10 +12,18 @@ layout: default
 <br>
 <br>
 
-{%if page.category != "animation"%}
-<img class="img-details" src="/assets/images/portfolio/{{page.category}}/{{page.filename}}"/>
-{% else %}
-<video class="img-details" loop autoplay muted playsinline>
-	<source src="/assets/images/portfolio/{{page.category}}/{{page.filename}}" type="video/mp4">
-</video>
-{% endif %}
+{% assign col = "" %}
+{% assign len = page.filename | size %}
+{% if len > 1 %}{% assign col = 2 %}{% endif %}
+
+<div class="grid column{{col}}">
+	{% for filename in page.filename%}
+	{%if page.category != "animation"%}
+	<img class="img-details" src="/assets/images/portfolio/{{page.category}}/{{filename}}"/>
+	{% else %}
+	<video class="img-details" loop autoplay muted playsinline>
+		<source src="/assets/images/portfolio/{{page.category}}/{{filename}}" type="video/mp4">
+	</video>
+	{% endif %}
+	{% endfor %}
+</div>

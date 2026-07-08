@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <!-- <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml"> -->
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/javascript/main.js"></script>
@@ -13,6 +12,9 @@
     <meta property="og:description" content="{{page.content | strip_html | truncate: 100}}">
     <meta property="og:image" content="{{site.url}}/assets/images/portfolio/{{page.category}}/thumbs/{{page.thumbnail}}">
     <meta property="og:url" content="{{site.url}}{{page.url}}">
+
+    {% if page.redirect_to %}<meta http-equiv="refresh" content="0; url={{page.redirect_to}}" />{% endif %}
+
   </head>
   <body>
     {{ content }}
