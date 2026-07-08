@@ -3,11 +3,11 @@
   {% for post in posts %}
     <a href="{{ post.url }}">
     {%if post.category != "animation"%}
-    <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}')";></div>
+    <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/{{post.number}}/thumb.webp')";></div>
     {% else %}
     <div class="video-container">
       <video loop autoplay muted playsinline>
-        <source src="/assets/images/portfolio/{{post.category}}/thumbs/{{post.thumbnail}}" type="video/webm">
+        <source src="/assets/images/portfolio/{{post.category}}/{{post.number}}/thumb.webm" type="video/webm">
       </video>
     </div>
     {% endif %}
