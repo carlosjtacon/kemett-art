@@ -118,12 +118,10 @@ a:hover {
 
 .stats {
 	font-size: 0.85em;
-	/* aspect-ratio: 1/1; */
 }
 
 .img-details {
 	max-width: 100%;
-	max-height: 700px;
 	margin: auto;
 	display: block;
 	border: 1px solid black;
@@ -203,7 +201,7 @@ ul.stars li::before {
 
 @media all and (min-width: 800px) {
 	body {
-		padding: 4em;
+		padding: 2.5em 4em 2.5em 4em;
 	}
 	.column2 {
 		--numcolumns: 2 !important;
