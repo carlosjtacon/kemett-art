@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="navigation">
-	<a id="navPrev" class="{% unless page.previous %}disabled{% endunless %}" href="{{page.previous.url}}">Previous</a>
+	<a id="navPrev" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Previous</a>
     ·
-	<a id="navNext" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Next</a>
+	<a id="navNext" class="{% unless page.previous %}disabled{% endunless %}" href="{{page.previous.url}}">Next</a>
 </div>
 
 <br>
