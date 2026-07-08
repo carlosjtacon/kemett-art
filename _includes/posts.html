@@ -1,8 +1,5 @@
 <div class="grid column3">
   {% assign posts = include.posts %}
-  {% assign posts = posts | sort: "filedate" %}
-  {% assign posts = posts | sort: "date" %}
-  {% assign posts = posts | sort: "order" | reverse %}
   {% for post in posts %}
     <a href="{{ post.url }}">
     {%if post.category != "animation"%}

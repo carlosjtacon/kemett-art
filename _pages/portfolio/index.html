@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Portfolio
+redirect_to: /portfolio/digital/
 ---
 
-<h1>{{page.title}}</h1>
+{% comment %} <h1>{{page.title}}</h1> {% endcomment %}
 
-{% include portfolio_filter.html selected='all' %}
-
-{% include posts.html posts=site.posts %}
+{% comment %} {% include portfolio_filter.html selected='all' %}
+{% include posts.html posts=site.posts %} {% endcomment %}

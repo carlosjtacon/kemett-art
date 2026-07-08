@@ -54,14 +54,11 @@ do
     fi
 
     template="---
-md5sum: "$(md5sum "$input_filename")"
-filedate: "$filedate"
-filename: "$output_filename"
-thumbnail: "$output_filename_thumb"
+number: "$output_filename"
+title:
 category: $category
 tags: $tags
-title:
-order: 0
+featured: 0
 ---
 
 "
