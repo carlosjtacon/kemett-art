@@ -12,17 +12,28 @@ layout: default
 <br>
 <br>
 
+{% assign images = '' | split: '' %}
+{% assign substring = "/assets/images/portfolio/" | append: page.category | append: "/" | append: page.number%}
+{% for file in site.static_files %}
+	{% if file.path contains substring %}
+	{% unless file.path contains "thumb" %}
+	{% assign images = images | push: file %}
+	{% endunless %}
+	{% endif %}
+{% endfor %}
+
+
 {% assign col = "" %}
-{% assign len = page.filename | size %}
-{% if len > 1 %}{% assign col = 2 %}{% endif %}
+{% assign len = images | size %}
+{% if len == 2 %}{% assign col = 2 %}{% endif %}
 
 <div class="grid column{{col}}">
-	{% for filename in page.filename%}
+	{% for image in images %}
 	{%if page.category != "animation"%}
-	<img class="img-details" src="/assets/images/portfolio/{{page.category}}/{{filename}}"/>
+	<img class="img-details" src="{{image.path}}"/>
 	{% else %}
 	<video class="img-details" loop autoplay muted playsinline>
-		<source src="/assets/images/portfolio/{{page.category}}/{{filename}}" type="video/mp4">
+		<source src="{{image.path}}" type="video/mp4">
 	</video>
 	{% endif %}
 	{% endfor %}
