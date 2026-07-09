@@ -50,6 +50,7 @@ h3 {
 	font-family: "Averia Serif Libre", serif;
 	text-align: right;
 	font-size: 1.25em;
+	font-weight: 300;
 	margin: 0;
 }
 
@@ -67,6 +68,12 @@ a {
 
 a:hover {
 	color: var(--linkColorHover) !important;
+}
+
+.serif{
+	font-family: "Averia Serif Libre", serif;
+	font-size: 1.05em;
+	font-weight: 300;
 }
 
 .breadcrumbs {
@@ -127,11 +134,16 @@ a:hover {
 }
 
 .stats {
+	text-align: center;
 	font-size: 0.85em;
 	padding: 0.75em;
-	border: 2px dotted black;
-	border-radius: 25px;
+	border: 2px dashed grey;
+	border-radius: 15px;
 	background-color: hsla(191, 28%, 55%, 0.2);
+	h2, h3 {
+		text-align: center;
+		color: rgba(93, 93, 93, 1);
+	}
 }
 
 .img-details {
@@ -154,7 +166,26 @@ a:hover {
 }
 
 .section {
-	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--backgroundColor);
+	background-color: var(--inkColor);
+	border: 2px solid var(--inkColor);
+	box-shadow: 3px 3px 0px var(--accentColor);
+
+	font-family: "IM Fell Double Pica SC", serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-decoration: none;
+	padding: 0.4em;
+}
+
+.section:hover {
+	background-color: var(--linkColorHover);
+	color: var(--inkColor) !important;
 }
 
 .btnstrip {
