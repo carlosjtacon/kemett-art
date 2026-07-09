@@ -1,25 +1,33 @@
 :root {
 	font-family: "Averia Sans Libre", sans-serif;
+
+	--inkColor: hsla(0, 0%, 12%, 1);
+	--titleColor: hsla(360, 1%, 7%, 1);
+	--backgroundColor: hsla(206, 20%, 84%, 1);
+	--linkColor: hsla(16, 66%, 56%, 1);
+	--linkColorHover: hsla(45, 67%, 54%, 1);
+	--accentColor: hsla(191, 28%, 55%, 1);
+	--disabledColor: hsla(0, 0%, 50%, 1);
 }
 
-body {
-	--inkColor: hsl(0, 0%, 12%);
-	--titleColor: hsl(360, 1%, 7%);
-	--backgroundColor: hsl(206, 20%, 84%);
-	--linkColor: #d47b3f;
-	--linkColorHover: #d8b03c;
-	--accentColor: rgb(127, 165, 204);
-	--disabledColor: grey;
+html {
+	/* background-image: radial-gradient(var(--backgroundColor) 2px, transparent 2px);
+	background-size: 32px 32px;
+	background-color: var(--accentColor); */
+}
 
+
+body {
 	background-color: var(--backgroundColor);
 	color: var(--inkColor);
 	padding: 2.5em;
 	min-width: 0;
-	max-width: 1920;
+	max-width: 1920px;
 	margin: auto;
 
-	--numcolumns: 1;
 	/* mobile first */
+	--numcolumns: 1;
+	/* border: 2px solid black; */
 }
 
 h1 {
@@ -52,7 +60,7 @@ h4 {
 
 a {
 	color: var(--linkColor);
-	text-decoration: none;
+	text-decoration: underline;
 	font-weight: 700;
 	font-style: italic;
 }
@@ -97,13 +105,15 @@ a:hover {
 	gap: 1em;
 }
 
-.column div {
+.column div, .column h2 {
 	flex-grow: 1;
 }
 
 .border {
 	padding: 0.75em;
 	border: 2px solid black;
+	background-color: rgba(0, 0, 0, 0.035);
+	box-shadow: 3px 3px 0px var(--accentColor);
 }
 
 .avatar {
@@ -118,6 +128,10 @@ a:hover {
 
 .stats {
 	font-size: 0.85em;
+	padding: 0.75em;
+	border: 2px dotted black;
+	border-radius: 25px;
+	background-color: hsla(191, 28%, 55%, 0.2);
 }
 
 .img-details {
@@ -138,7 +152,12 @@ a:hover {
 	position: relative;
 }
 
+.section {
+	width: 100%;
+}
+
 .btnstrip {
+	text-decoration: none;
 	border: 2px solid var(--inkColor);
 	color: var(--inkColor);
 	padding: 0.25em 1.25em 0.25em 1.25em;
@@ -199,7 +218,7 @@ ul.stars li::before {
 }
 
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 1024px) {
 	body {
 		padding: 2.5em 4em 2.5em 4em;
 	}
