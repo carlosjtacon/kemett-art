@@ -1,16 +1,6 @@
 ---
-layout: default
+layout: post_empty
 ---
-
-<div class="navigation">
-	<a id="navPrev" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Previous</a>
-    ·
-	<a id="navNext" class="{% unless page.previous %}disabled{% endunless %}" href="{{page.previous.url}}">Next</a>
-</div>
-
-<br>
-<br>
-<br>
 
 {% assign images = '' | split: '' %}
 {% assign substring = "/assets/images/portfolio/" | append: page.category | append: "/" | append: page.number%}
@@ -39,3 +29,5 @@ layout: default
 	{% endif %}
 	{% endfor %}
 </div>
+
+{{content}}
