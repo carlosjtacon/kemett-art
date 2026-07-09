@@ -26,6 +26,7 @@ layout: default
 {% assign col = "" %}
 {% assign len = images | size %}
 {% if len == 2 %}{% assign col = 2 %}{% endif %}
+{% if page.category == "sketchbook" and len > 2 %}{% assign col = 2 %}{% endif %}
 
 <div class="grid column{{col}}">
 	{% for image in images %}
