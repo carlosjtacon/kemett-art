@@ -265,6 +265,12 @@ ul.stars li::before {
 	content: counter(list-item, --stars) !important;
 }
 
+.about-img {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+}
 
 @media all and (min-width: 1024px) {
 	body {
@@ -286,5 +292,11 @@ ul.stars li::before {
 		position: relative;
 		text-align: right;
 		float: right;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.about-img {
+		aspect-ratio: 3/4;
 	}
 }
