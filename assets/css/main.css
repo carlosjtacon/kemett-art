@@ -8,12 +8,20 @@
 	--linkColorHover: hsla(45, 67%, 54%, 1);
 	--accentColor: hsla(191, 28%, 55%, 1);
 	--disabledColor: hsla(0, 0%, 50%, 1);
+	--darkGrey: hsla(0, 0%, 37%, 1);
+
+	--patternColor: hsl(from var(--accentColor) h s calc(l - 2));
 }
 
 html {
-	/* background-image: radial-gradient(var(--backgroundColor) 2px, transparent 2px);
-	background-size: 32px 32px;
-	background-color: var(--accentColor); */
+	/* pattern background */
+	background:
+      radial-gradient(100px at 100% 0, var(--accentColor) 6.25%, var(--patternColor) 6.3% 18.75%, var(--accentColor) 18.8% 31.25%, var(--patternColor) 31.3% 43.75%, var(--accentColor) 43.8% 56.25%, var(--patternColor) 56.3% 68.75%, #0000 0),
+      radial-gradient(100px at 0 0, var(--accentColor) 6.25%, var(--patternColor) 6.3% 18.75%, var(--accentColor) 18.8% 31.25%, var(--patternColor) 31.3% 43.75%, var(--accentColor) 43.8% 56.25%, var(--patternColor) 56.3% 68.75%, #0000 0),
+      radial-gradient(100px at 0 100%, var(--accentColor) 6.25%, var(--patternColor) 6.3% 18.75%, var(--accentColor) 18.8% 31.25%, var(--patternColor) 31.3% 43.75%, var(--accentColor) 43.8% 56.25%, var(--patternColor) 56.3% 68.75%, #0000 0),
+      radial-gradient(100px at 100% 100%, var(--accentColor) 6.25%, var(--patternColor) 6.3% 18.75%, var(--accentColor) 18.8% 31.25%, var(--patternColor) 31.3% 43.75%, var(--accentColor) 43.8% 56.25%, var(--patternColor) 56.3% 68.75%, #0000 0) var(--accentColor);
+	background-size: 100px 100px;
+	background-color: var(--accentColor);
 }
 
 
@@ -142,7 +150,7 @@ a:hover {
 	background-color: hsla(191, 28%, 55%, 0.2);
 	h2, h3 {
 		text-align: center;
-		color: rgba(93, 93, 93, 1);
+		color: var(--darkGrey);
 	}
 }
 
