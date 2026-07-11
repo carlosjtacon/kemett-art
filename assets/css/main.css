@@ -267,10 +267,11 @@ ul.stars li::before {
 }
 
 .about-img {
-	background-size: contain;
+	margin: 1em;
+	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
-	width: 100%;
+	background-position: top center;
+	width: 90%;
 }
 
 @media all and (min-width: 1024px) {
