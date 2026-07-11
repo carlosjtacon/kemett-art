@@ -78,13 +78,10 @@ a:hover {
 	color: var(--linkColorHover) !important;
 }
 
-.serif{
+p {
 	font-family: "Averia Serif Libre", serif;
 	font-size: 1.05em;
 	font-weight: 300;
-}
-
-.justify {
 	text-align: justify;
 }
 
@@ -250,6 +247,10 @@ a:hover {
 ul.bullets li {
 	list-style: none;
 	line-height: 1.5;
+
+	font-family: "Averia Serif Libre", serif;
+	font-size: 1.05em;
+	font-weight: 300;
 }
 
 ul.bullets li::before {
