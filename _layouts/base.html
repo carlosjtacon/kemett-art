@@ -18,10 +18,10 @@
       {% endif %}
     {% endfor %}
 
-    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:title" content="{{page.title | replace: "-", " " | capitalize}}">
     <meta property="og:description" content="{{page.content | strip_html | normalize_whitespace | truncate: 100}}">
-    {% if images | size | at_least: 1 %}
     {% assign thumb = images | first %}
+    {% if thumb %}
     <meta property="og:image" content="{{site.url}}{{thumb.path}}">
     {% endif %}
     <meta property="og:url" content="{{site.url}}{{page.url}}">
