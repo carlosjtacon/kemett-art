@@ -8,9 +8,22 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/javascript/main.js"></script>
 
+    {% assign images = '' | split: '' %}
+    {% assign substring = "/assets/images/portfolio/" | append: page.category | append: "/" | append: page.number%}
+    {% for file in site.static_files %}
+      {% if file.path contains substring %}
+      {% unless file.path contains "thumb" %}
+      {% assign images = images | push: file %}
+      {% endunless %}
+      {% endif %}
+    {% endfor %}
+
     <meta property="og:title" content="{{page.title}}">
-    <meta property="og:description" content="{{page.content | strip_html | truncate: 100}}">
-    <meta property="og:image" content="{{site.url}}/assets/images/portfolio/{{page.category}}/thumbs/{{page.thumbnail}}">
+    <meta property="og:description" content="{{page.content | strip_html | normalize_whitespace | truncate: 100}}">
+    {% if images | size | at_least: 1 %}
+    {% assign thumb = images | first %}
+    <meta property="og:image" content="{{site.url}}{{thumb.path}}">
+    {% endif %}
     <meta property="og:url" content="{{site.url}}{{page.url}}">
 
     {% if page.redirect_to %}<meta http-equiv="refresh" content="0; url={{page.redirect_to}}" />{% endif %}
