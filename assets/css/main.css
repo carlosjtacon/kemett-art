@@ -278,6 +278,11 @@ ul.stars li::before {
 	body {
 		padding: 2.5em 4em 2.5em 4em;
 	}
+
+	.mobile {
+		display: none;
+	}
+
 	.column2 {
 		--numcolumns: 2 !important;
 	}
@@ -300,5 +305,9 @@ ul.stars li::before {
 @media all and (max-width: 1024px) {
 	.about-img {
 		aspect-ratio: 3/4;
+	}
+
+	.desktop {
+		display: none;
 	}
 }
