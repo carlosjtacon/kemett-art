@@ -11,10 +11,8 @@
     {% assign images = '' | split: '' %}
     {% assign substring = "/assets/images/portfolio/" | append: page.category | append: "/" | append: page.number%}
     {% for file in site.static_files %}
-      {% if file.path contains substring %}
-      {% unless file.path contains "thumb" %}
+      {% if file.path contains substring and file.path contains "thumb" %}
       {% assign images = images | push: file %}
-      {% endunless %}
       {% endif %}
     {% endfor %}
 
