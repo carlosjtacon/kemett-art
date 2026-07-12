@@ -9,8 +9,15 @@ title: Kemett Art
       <h1>Kemett Art</h1>
     </div>
 
-    <div></div>
-
+    <div class="column desktop" style=" height: 95%;">
+      <div id="roll" style="
+      background-image: url('/assets/images/die-icon.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      cursor: pointer;
+      "></div>
+    </div>
 
     <div class="column">
       <a class="section" href="portfolio">Portfolio</a>
@@ -143,4 +150,33 @@ title: Kemett Art
       </ul>
     </div>
   </div>
+
+  <div class="mobile">
+    <img id="roll-mob" style="cursor: pointer; display: block; margin: auto; width: 35%;" src="/assets/images/die-icon.png"/>
+  </div>
+
 </div>
+
+
+<script>
+  const posts = [
+		{%- for post in site.posts %}
+		"{{post.url}}"{% unless forloop.last %},{% endunless %}
+		{%- endfor %}
+	]
+
+  this.addEventListener("DOMContentLoaded", setupEvents, true);
+
+  function setupEvents(e) {
+    var rollButton = document.getElementById("roll");
+    rollButton.addEventListener('click', roll, false);
+    var rollMobButton = document.getElementById("roll-mob");
+    rollMobButton.addEventListener('click', roll, false);
+  }
+
+  function roll(e) {
+    var item = posts[Math.floor(Math.random()*posts.length)];
+    window.location = item;
+  }
+
+</script>
