@@ -136,7 +136,7 @@ p {
 	margin-top: 1em;
 	width: 100%;
 	aspect-ratio: 1/1;
-	background-image: url('/assets/images/avatar.png');
+	background-image: url('/assets/images/avatar-thumb.webp');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
