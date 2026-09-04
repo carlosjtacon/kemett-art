@@ -2,96 +2,96 @@
   font-family: "Pirata One";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Pirata_One/PirataOne-Regular.ttf");
+  src: url("/assets/fonts/Pirata_One/PirataOne-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "IM Fell Double Pica SC";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/IM_Fell_Double_Pica_SC/IMFellDoublePicaSC-Regular.ttf");
+  src: url("/assets/fonts/IM_Fell_Double_Pica_SC/IMFellDoublePicaSC-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 300;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 300;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-LightItalic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 400;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-Italic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Serif Libre";
   font-weight: 700;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.ttf");
+  src: url("/assets/fonts/Averia_Serif_Libre/AveriaSerifLibre-BoldItalic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 300;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Light.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Regular.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Bold.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 300;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-LightItalic.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-LightItalic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 400;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Italic.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-Italic.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Averia Sans Libre";
   font-weight: 700;
   font-style: italic;
-  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-BoldItalic.ttf");
+  src: url("/assets/fonts/Averia_Sans_Libre/AveriaSansLibre-BoldItalic.woff2") format("woff2");
 }
