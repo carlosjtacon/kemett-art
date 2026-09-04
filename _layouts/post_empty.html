@@ -2,10 +2,37 @@
 layout: default
 ---
 
+{%- assign category = page.categories | first -%}
+{%- assign sorted_posts = site.categories[category] | sort: 'number' -%}
+
+{%- for post in sorted_posts -%}
+		{%- if post.url == page.url -%}
+
+		{%- assign currIndex = forloop.index0 -%}
+		{%- assign prevIndex = currIndex | minus: 1 -%}
+		{%- assign nextIndex = currIndex | plus: 1 -%}
+		{%- assign articleIndexLength = forloop.length | minus: 1 -%}
+
+		{%- if currIndex == articleIndexLength -%}
+				{%- assign prev_post = sorted_posts[prevIndex] -%}
+		{%- endif -%}
+
+		{%- if currIndex < articleIndexLength and currIndex != 0 -%}
+				{%- assign prev_post = sorted_posts[prevIndex] -%}
+				{%- assign next_post = sorted_posts[nextIndex] -%}
+		{%- endif -%}
+
+		{%- if currIndex == 0 -%}
+				{%- assign next_post = sorted_posts[nextIndex] -%}
+		{%- endif -%}
+
+		{%- endif -%}
+{%- endfor -%}
+
 <div class="navigation">
-	<a id="navPrev" class="{% unless page.next %}disabled{% endunless %}" href="{{page.next.url}}">Previous</a>
+	<a id="navPrev" class="{% unless next_post %}disabled{% endunless %}" href="{{next_post.url}}">Previous</a>
     ·
-	<a id="navNext" class="{% unless page.previous %}disabled{% endunless %}" href="{{page.previous.url}}">Next</a>
+	<a id="navNext" class="{% unless prev_post %}disabled{% endunless %}" href="{{prev_post.url}}">Next</a>
 </div>
 
 <br>
