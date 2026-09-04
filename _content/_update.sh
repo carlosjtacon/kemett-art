@@ -64,6 +64,8 @@ title: "$title"
 category: $category
 tags: $tags
 featured: 0
+theme:
+related_posts: []
 ---
 
 "

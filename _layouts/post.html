@@ -70,6 +70,7 @@ layout: post_empty
 {% for post in site.posts %}
 {% if post.url contains rpost %}
 {% include related_post.html post=post%}
+<br>
 {% endif %}
 {% endfor %}
 {% endfor %}

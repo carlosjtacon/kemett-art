@@ -299,7 +299,7 @@ ul.stars li::before {
 
 .post-link-grid {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 4fr;
 	color: var(--backgroundColor);
 	background-color: hsl(from var(--backgroundColor) h s calc(l + 5));
 	/* background-color: var(--accentColor); */
