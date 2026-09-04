@@ -4,9 +4,10 @@ permalink: /portfolio/traditional/
 title: Traditional Art
 ---
 
-<h1>{{page.title}}</h1>
-
 {% include portfolio_filter.html selected='traditional' %}
+
+<p>I love painting on physical media - mostly gouache and pencil, but also trying new things! I love painting animals, creatures or landscapes. Sometimes they will be gifts for friends.</p>
+
 
 {% assign posts = site.posts | where: "category", "traditional"%}
 {% include posts.html posts=posts %}

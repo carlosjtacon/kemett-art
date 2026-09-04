@@ -2,6 +2,8 @@
 layout: post_empty
 ---
 
+{{content}}
+
 {% assign images = '' | split: '' %}
 {% assign substring = "/assets/images/portfolio/" | append: page.category | append: "/" | append: page.number%}
 {% for file in site.static_files %}
@@ -13,10 +15,34 @@ layout: post_empty
 {% endfor %}
 
 
+{% if page.theme == "full-width" %}
+
+<div class="grid">
+	{% for image in images %}
+	<img class="img-details fullwidth" src="{{image.path}}"/>
+	{% endfor %}
+</div>
+
+{% elsif page.theme == "cover-img" %}
+
+{% assign cover = images | first %}
+<img class="img-details fullwidth" src="{{cover.path}}"/>
+<br>
+<div class="grid column2">
+{% for image in images %}
+{% unless forloop.first %}
+	<img class="img-details fullwidth" src="{{image.path}}"/>
+{% endunless %}
+{% endfor %}
+</div>
+
+{% else %}
+
 {% assign col = "" %}
 {% assign len = images | size %}
-{% if len == 2 %}{% assign col = 2 %}{% endif %}
+{% if len == 2 or page.theme == "column-2" %}{% assign col = 2 %}{% endif %}
 {% if page.category == "sketchbook" and len > 2 %}{% assign col = 2 %}{% endif %}
+{% if page.theme == "column-3" %}{% assign col = 3 %}{% endif %}
 
 <div class="grid column{{col}}">
 	{% for image in images %}
@@ -30,4 +56,4 @@ layout: post_empty
 	{% endfor %}
 </div>
 
-{{content}}
+{% endif %}

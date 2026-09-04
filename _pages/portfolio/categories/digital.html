@@ -4,9 +4,9 @@ permalink: /portfolio/digital/
 title: Digital Art
 ---
 
-<h1>{{page.title}}</h1>
-
 {% include portfolio_filter.html selected='digital' %}
+
+<p>You can find here the art pieces that I've created digitally, either with Photoshop on my desktop or with Procreate on my iPad which I use to draw on the go. I focus mostly, -but not only!- on character design for different universes, including Warhammer, Dungeons and Dragons and Ctuhlu.</p>
 
 {% assign posts = site.posts | where: "category", "digital"%}
 {% include posts.html posts=posts %}

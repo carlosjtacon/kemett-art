@@ -4,9 +4,9 @@ permalink: /portfolio/sketchbook/
 title: Sketchbook
 ---
 
-<h1>{{page.title}}</h1>
-
 {% include portfolio_filter.html selected='sketchbook' %}
+
+<p>I always carry a sketchbook in my backpack, drawing everywhere I go: trying to come up with new ideas, doing live portraits of people in the tube or taking references from real life.</p>
 
 {% assign posts = site.posts | where: "category", "sketchbook"%}
 {% include posts.html posts=posts %}

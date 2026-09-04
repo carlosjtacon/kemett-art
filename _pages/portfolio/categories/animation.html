@@ -4,9 +4,9 @@ permalink: /portfolio/animation/
 title: Animation
 ---
 
-<h1>{{page.title}}</h1>
-
 {% include portfolio_filter.html selected='animation' %}
+
+<p>I mostly draw, but I've also done some animation experiments in 2D and frame by frame. It's really fun, so I will do more!</p>
 
 {% assign posts = site.posts | where: "category", "animation"%}
 {% include posts.html posts=posts %}
