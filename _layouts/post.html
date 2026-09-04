@@ -21,19 +21,19 @@ layout: post_empty
 
 <div class="grid">
 	{% for image in images %}
-	<img class="img-details fullwidth" src="{{image.path}}"/>
+	{% include img-details.html class="fullwidth" image=image %}
 	{% endfor %}
 </div>
 
 {% elsif page.theme == "cover" %}
 
 {% assign cover = images | first %}
-<img class="img-details fullwidth" src="{{cover.path}}"/>
+{% include img-details.html class="fullwidth" image=cover %}
 <br>
 <div class="grid column2">
 {% for image in images %}
 {% unless forloop.first %}
-	<img class="img-details fullwidth" src="{{image.path}}"/>
+	{% include img-details.html class="fullwidth" image=image %}
 {% endunless %}
 {% endfor %}
 </div>
@@ -48,7 +48,9 @@ layout: post_empty
 <div class="grid column{{col}}">
 	{% for image in images %}
 	{%if page.category != "animation"%}
-	<img class="img-details" src="{{image.path}}"/>
+
+	{% include img-details.html class="" image=image %}
+
 	{% else %}
 	<video class="img-details" loop autoplay muted playsinline>
 		<source src="{{image.path}}" type="video/mp4">
