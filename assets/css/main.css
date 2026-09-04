@@ -207,10 +207,6 @@ p {
 	border: 2px solid var(--inkColor);
 	box-shadow: 3px 3px 0px var(--accentColor);
 
-	font-family: "IM Fell Double Pica SC", serif;
-	font-style: normal;
-	font-size: 1.5em;
-	font-weight: 300;
 	text-decoration: none;
 	padding: 0.4em;
 }
@@ -218,6 +214,13 @@ p {
 .section:hover {
 	background-color: var(--linkColorHover);
 	color: var(--inkColor) !important;
+}
+
+.font-h2 {
+	font-family: "IM Fell Double Pica SC", serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 .btnstrip {
@@ -291,6 +294,35 @@ ul.stars li::before {
 	background-repeat: no-repeat;
 	background-position: top center;
 	width: 90%;
+}
+
+
+.post-link-grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	color: var(--backgroundColor);
+	background-color: hsl(from var(--backgroundColor) h s calc(l + 5));
+	/* background-color: var(--accentColor); */
+	border: 2px solid var(--inkColor);
+	/* box-shadow: 3px 3px 0px var(--accentColor); */
+
+	p {
+		color: var(--inkColor);
+	}
+}
+
+.post-link-description {
+	padding: 1em;
+}
+
+.post-link-thumb {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	aspect-ratio: 3/4;
+	border-right: 2px solid var(--inkColor);
+
 }
 
 @media all and (min-width: 1024px) {

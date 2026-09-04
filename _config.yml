@@ -22,7 +22,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      permalink: "/portfolio/:categories/:year-:month-:day-:title"
+      permalink: "/portfolio/:categories/:title"
       layout: "post"
 
 exclude:
