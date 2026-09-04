@@ -2,7 +2,7 @@
 layout: post_empty
 ---
 
-{% comment %} <h2>{{page.title}}</h2> {% endcomment %}
+<h1>{{page.title | replace: "-", " " | capitalize}}</h1>
 
 {{content}}
 
@@ -61,11 +61,16 @@ layout: post_empty
 
 {% endif %}
 
+{% if page.related_posts %}
+<br>
+<br>
+<h3 style="text-align: center;">Linked Artwork</h3>
+<br>
 {% for rpost in page.related_posts %}
 {% for post in site.posts %}
 {% if post.url contains rpost %}
-<br>
 {% include related_post.html post=post%}
 {% endif %}
 {% endfor %}
 {% endfor %}
+{% endif %}
