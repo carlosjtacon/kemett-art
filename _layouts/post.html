@@ -17,7 +17,7 @@ layout: post_empty
 {% endfor %}
 
 
-{% if page.theme == "full-width" %}
+{% if page.theme == "fullwidth" %}
 
 <div class="grid">
 	{% for image in images %}
@@ -25,7 +25,7 @@ layout: post_empty
 	{% endfor %}
 </div>
 
-{% elsif page.theme == "cover-img" %}
+{% elsif page.theme == "cover" %}
 
 {% assign cover = images | first %}
 <img class="img-details fullwidth" src="{{cover.path}}"/>
@@ -42,9 +42,8 @@ layout: post_empty
 
 {% assign col = "" %}
 {% assign len = images | size %}
-{% if len == 2 or page.theme == "column-2" %}{% assign col = 2 %}{% endif %}
+{% if len == 2 or page.theme == "col2" %}{% assign col = 2 %}{% endif %}
 {% if page.category == "sketchbook" and len > 2 %}{% assign col = 2 %}{% endif %}
-{% if page.theme == "column-3" %}{% assign col = 3 %}{% endif %}
 
 <div class="grid column{{col}}">
 	{% for image in images %}

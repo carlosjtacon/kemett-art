@@ -6,6 +6,7 @@
 ### To add new content to the portfolio:
 - Add folders with `number_title` under the `content` folder
 - exec `./_update.sh digital|traditional|sketchbook|animation`
+- Available themes on portfolio pages are none/default, cover, fullwidth, col2
 
 
 ### Git LFS
