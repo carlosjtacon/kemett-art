@@ -7,6 +7,19 @@
 - Add folders with `number_title` under the `content` folder
 - exec `./_update.sh digital|traditional|sketchbook|animation`
 - Available themes on portfolio pages are none/default, cover, fullwidth, col2
+- Template for portfolio posts
+```
+---
+number: '0000'
+title: My title
+category: digital|traditional|sketchbook|animation
+tags: anything
+featured: 0/1
+theme:none/default|cover|fullwidth|col2
+related_posts: ['digital/0003', 'sketchbook/0010']
+---
+```
+
 
 
 ### Git LFS
