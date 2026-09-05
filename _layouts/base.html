@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{page.title | replace: "-", " " | capitalize}}</title>
+    <title>{{page.title}}</title>
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/javascript/main.js"></script>
@@ -16,7 +16,7 @@
       {% endif %}
     {% endfor %}
 
-    <meta property="og:title" content="{{page.title | replace: "-", " " | capitalize}}">
+    <meta property="og:title" content="{{page.title}}">
     <meta property="og:description" content="{{page.content | strip_html | normalize_whitespace | truncate: 100}}">
     {% assign thumb = images | first %}
     {% if thumb %}

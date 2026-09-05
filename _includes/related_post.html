@@ -2,7 +2,7 @@
     <div class="post-link-thumb" style="background-image: url('{{site.url}}/assets/images{{include.post.url}}/thumb.webp')"></div>
     <div class="post-link-description column">
       <div>
-        <h2>{{ include.post.title | replace: "-", " " | capitalize }}</h2>
+        <h2>{{ include.post.title }}</h2>
         <p>{{ include.post.content | strip_html | truncate: 300 }}</p>
       </div>
       <a class="section" href="{{include.post.url}}">{{include.post.categories | first | upcase }} / {{include.post.title | upcase}} →</a>
