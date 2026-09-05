@@ -18,3 +18,5 @@
 - `git lfs ls-files --all` to check what's part of LFS
 
 **! Reminder to myself Nova kind of messes up git LFS, use Github desktop app instead.**
+
+Hi there I'm Alix
