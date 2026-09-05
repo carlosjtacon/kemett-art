@@ -15,7 +15,7 @@ title: My title
 category: digital|traditional|sketchbook|animation
 tags: anything
 featured: 0/1
-theme:none/default|cover|fullwidth|col2
+theme: none/default|cover|fullwidth|col2
 related_posts: ['digital/0003', 'sketchbook/0010']
 ---
 ```
