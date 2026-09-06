@@ -66,12 +66,40 @@ layout: post_empty
 <br>
 <h3 style="text-align: center;">Linked Artwork</h3>
 <br>
+<div class="grid column2">
 {% for rpost in page.related_posts %}
 {% for post in site.posts %}
 {% if post.url contains rpost %}
 {% include related_post.html post=post%}
+{% endif %}
+{% endfor %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% comment %}
+{% for tag in page.tags %}
+
+{% assign list = "" | split: "" %}
+{% for post in site.posts %}
+{% if post.tags contains tag and post.url != page.url %}
+{% assign list = list | push: post %}
+{% endif %}
+{% endfor %}
+
+{% assign listsize = list | size %}
+{% if listsize >  0 %}
 <br>
-{% endif %}
+<h3 style="text-align: center;">More {{tag | capitalize}}</h3>
+<br>
+<div class="grid column2">
+{% for post in list%}
+{% include related_post.html post=post %}
 {% endfor %}
-{% endfor %}
+</div>
 {% endif %}
+
+
+{% endfor %}
+{% endcomment %}
+
