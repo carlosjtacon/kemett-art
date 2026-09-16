@@ -6,7 +6,7 @@
     {% if page.title == 'Index'} %}
     / {{ crumb | capitalize }}
     {% else %}
-    / {{ page.title | replace: "-", " " | capitalize }}
+    / {{ page.title }}
     {% endif %}
 {% else %}
 / <a

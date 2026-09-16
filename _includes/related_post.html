@@ -1,10 +1,19 @@
-  <div class="post-link-grid">
+  <div class="post-link-grid column">
+    {% assign cat = include.post.categories | first %}
+    {% if cat == "animation" %}
+    <div class="video-container post-link-thumb">
+      <video loop autoplay muted playsinline>
+        <source src="{{site.url}}/assets/images/portfolio/animation/{{include.post.number}}/thumb.webm" type="video/webm">
+      </video>
+    </div>
+    {% else %}
     <div class="post-link-thumb" style="background-image: url('{{site.url}}/assets/images{{include.post.url}}/thumb.webp')"></div>
+    {% endif %}
     <div class="post-link-description column">
       <div>
-        <h2>{{ include.post.title | replace: "-", " " | capitalize }}</h2>
-        <p>{{ include.post.content | strip_html | truncate: 300 }}</p>
+        <h2>{{ include.post.title }}</h2>
+        {% comment %} <p>{{ include.post.content | strip_html | truncate: 60 }}</p> {% endcomment %}
       </div>
-      <a class="section" href="{{include.post.url}}">{{include.post.categories | first | upcase }} / {{include.post.title | upcase}} →</a>
+      <a class="section" href="{{include.post.url}}">{{include.post.categories | first | upcase }} / {{include.post.title | truncate: 20 | upcase}} →</a>
     </div>
   </div>

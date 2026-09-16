@@ -7,7 +7,7 @@
     {%if post.category != "animation"%}
     <div class="thumbnail" style="background-image: url('/assets/images/portfolio/{{post.category}}/{{post.number}}/thumb.webp')";></div>
     {% else %}
-    <div class="video-container">
+    <div class="video-container" style="border: 1px solid black;">
       <video loop autoplay muted playsinline>
         <source src="/assets/images/portfolio/{{post.category}}/{{post.number}}/thumb.webm" type="video/webm">
       </video>
