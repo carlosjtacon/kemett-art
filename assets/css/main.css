@@ -332,6 +332,17 @@ ul.stars li::before {
 
 }
 
+#roll {
+	background-image: url('/assets/images/roll-thumb.webp');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+#roll:hover {
+	background-image: url('/assets/images/roll.gif') !important;
+}
+
 @media all and (min-width: 1024px) {
 	body {
 		padding: 2.5em 4em 2.5em 4em;
