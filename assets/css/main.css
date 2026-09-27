@@ -327,9 +327,7 @@ ul.stars li::before {
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
-	aspect-ratio: 3/4;
 	border-right: 1px solid var(--inkColor);
-
 }
 
 #roll {
@@ -376,6 +374,10 @@ ul.stars li::before {
 		position: relative;
 		text-align: right;
 		float: right;
+	}
+
+	.post-link-thumb {
+		aspect-ratio: 3/4;
 	}
 }
 
