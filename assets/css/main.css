@@ -339,6 +339,14 @@ ul.stars li::before {
 	background-position: center center;
 	cursor: pointer;
 }
+
+@media (pointer: coarse) {
+	/* Should show the gif in touchscreens */
+	#roll {
+		background-image: url('/assets/images/roll.gif') !important;
+	}
+}
+
 #roll:hover {
 	background-image: url('/assets/images/roll.gif') !important;
 }
